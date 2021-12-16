@@ -1,6 +1,6 @@
 package main
 
-// Defining constant
+// Defining constants
 const englishHelloPrefix = "Hello, "
 const spanishHelloPrefix = "Hola, "
 const spanish = "Spanish"
