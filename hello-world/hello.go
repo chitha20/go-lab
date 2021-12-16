@@ -1,13 +1,27 @@
 package main
 
-import (
-	"fmt"
-)
+// Defining constant
+const englishHelloPrefix = "Hello, "
+const spanishHelloPrefix = "Hola, "
+const spanish = "Spanish"
+const french = "french"
+const frenchHelloPrefix = "Bonjour, "
 
-func Hello(name string) string {
-	return "hello, " + name
+func Hello(name string, language string) string {
+	if name == "" {
+		name = "world"
+	}
+	return greetingPrefix(language) + name
 }
 
-func main() {
-	fmt.Println(Hello("world"))
+func greetingPrefix(language string) (prefix string) {
+	switch language {
+	case spanish:
+		prefix = spanishHelloPrefix
+	case french:
+		prefix = frenchHelloPrefix
+	default:
+		prefix = englishHelloPrefix
+	}
+	return prefix
 }
